@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+ <head>
+ <link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <title>Oleg Voronko</title>
+  <meta charset="UTF-8">
+  <!-- Просим IE переключиться в последний режим -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- Корректное масштабирование на разных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO -->
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet"  href="css/contact.css"> 
+   <link rel="stylesheet"  href="bower/normalize-css/normalize.css">
+   <script src="js/html5shiv.js"></script>
+  </head>
+ <body>
+  <div class="wrapper">
+   <header class="header">
+    <div class="container-header group">
+     <div class="logo group">
+      <img class="logo-pic" src="images/logo.png" alt="">
+      <img class="logo-text" src="images/logo-text.png" alt="">
+     </div>
+     <ul class="socials group">
+       <li class="social-icon">
+         <a href="https://vk.com/oleg_dozent" class="soc-link soc-vk">VK</a>
+       </li>
+       <li class="social-icon">
+         <a href="https://twitter.com/Olegd0zent" class="soc-link soc-tw">TW</a>
+       </li>
+       <li class="social-icon">
+         <a href="https://facebook.com/oleg.crimson" class="soc-link soc-fb">FB</a>
+       </li>
+       <li class="social-icon">
+         <a href="https://github.com/Oleg-docent" class="soc-link soc-gh">GH</a>
+       </li>
+     </ul>
+    </div>
+    
+   </header>
+   <div class="main-content group">
+    <div class="col">
+      <nav class="menu">
+        <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Обо мне</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html" class="nav-link">Мои работы</a>
+        </li>
+        <li class="nav-item active">
+          <a href="contact.html" class="nav-link">Связаться со мной</a>
+        </li>
+        </ul>
+      </nav>
+      <div class="contacts">
+        <div class="contacts-block">
+          <div class="contacts-title">
+            <p class="text-style">Контакты</p>
+          </div>
+        </div>
+        <div class="mail-block group">
+          <a href="mailto:dev_oleg@olegvoronko.ru" class="mail-text"><img class="mail" src="images/mail.png" alt="" width="21" height="16">
+          dozent07@yandex.ru</a>
+        </div>
+        <div class="tel-block group">
+          <a href="tel:+79500232708"class="tel-text"><img class="tel" src="images/tel.png" alt="" width="19" height="20">
+          +79812342323</a>
+        </div>
+        <div class="skype-block group">
+          <a href="skype:oleg-dozent?call" class="skype-text"><img class="skype" src="images/skype.png" alt="" width="20" height="20">
+          oleg-dozent
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+     <section class="contact-me">
+       <p class="contact-title">У вас есть интересный проект? Напишите мне</p>
+       <div class="contact-container">
+         <form class="form-place" method="post" action="server">
+           <div class="name-left">
+             <label for="name">Имя</label>
+             <input class="form-name" type="text" placeholder="Как к вам обращаться">
+           </div>
+           <div class="email-right">
+             <label for="e-mail">E-mail</label>
+             <input class="form-email" type="text" placeholder="Куда мне писать">
+           </div>
+           <div class="message-area">
+             <label for="message">Сообщение</label>
+             <textarea class="message-text" placeholder="Кратко в чем суть" type="text"></textarea>
+           </div>
+           <p class="captcha-text">Введите код указанный на картинке</p>
+           <div class="captcha-fields">
+             <div class="captcha-img">
+               <img class="c-image" src="images/captcha.png" alt="">
+             </div>
+             <div class="c-input">
+             <input class="captcha-input" type="text" placeholder="Введите код">
+             </div>
+           </div>
+           <div class="buttons">
+             <button class="button submit-button button-left" type="submit">Отправить</button>
+             <button class="button clear-button button-right" type="rest">Очистить</button>
+           </div>
+         </form>
+       </div>
+     </section> 
+     
+    </div>
+   </div>
+  </div>
+  <div class="empty"></div>
+  <footer class="footer">
+    <div class="container-footer">
+     <div class="login login-left">
+       <a class="login-link" href="#">Зайти</a>
+     </div>
+       <p class="footer-text">© 2015.Это мой сайт, пожалуйста не копируйте и не воруйте его</p>
+    </div>
+   </footer>
+   <script src="bower/jquery/jquery.js"></script>
+   <script src="js/main.js"></script>
+ </body>
+</html>
