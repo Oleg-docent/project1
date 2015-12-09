@@ -261,6 +261,9 @@ display: block;
 .mail {
   float: left;
   margin: 5px 19px 0 27px;
+  width: 21px;
+  height: 16px;
+
 }
 .mail-text {
   width: 193px;
@@ -278,6 +281,9 @@ display: block;
 .tel {
   float: left;
   margin: 0 21px 0 3px;
+  width: 19px;
+  height: 20px;
+
 }
 .tel-text {
   margin: 1px 0 -5px;
@@ -301,6 +307,8 @@ display: block;
 .skype {
   float: left;
   margin: 1px 19px 0 1px;
+  width: 20px;
+  height: 20px;
 }
 .skype-text {
   margin: 0 0 -1px;
