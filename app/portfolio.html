@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru-RU">
  <head>
  <link rel="icon" href="/favicon.ico" type="image/x-icon">
  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
@@ -13,8 +13,9 @@
   <meta name="description" content="">
   <meta name="keyword" content="">
   <meta name="author" content="">
+  <link rel="stylesheet"  href="bower/normalize-css/normalize.css">
   <link rel="stylesheet"  href="css/portfolio.css"> 
-  <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/popup.css">
   <script src="js/html5shiv.js"></script>
 </head>
  <body>
@@ -141,7 +142,44 @@
         <p class="footer-text">© 2015.Это мой сайт, пожалуйста не копируйте и не воруйте его</p>
       </div>
     </footer>
+    <div class="popup hide">
+    
+      <div class ="popup-title group">
+        <img class="close" src="images/close.png" alt="">
+        <p class="add-project-title">Добавление проекта</p>
+      </div>
+      <div class="line"></div>
+      <div class="popup-container">
+        <form class="popup-form" action="server" method="post">
+               <div class="name-project">       
+                 <label for="name">Название проекта</label>
+                 <input class="add-name" type="text" placeholder="Введите название">
+               </div>
+               <div class="project-picture form-block">
+                 <label for="picture">Картинка проекта</label>
+                 <input type="file">
+               </div>
+               <div class="url-project form-block">
+                 <label for="url">URL проекта</label>
+                 <input class="add-link" type="text" placeholder="Добавьте ссылку">
+               </div>
+               <div class="description-area form-block">
+                 <label for="few-words">Описание</label>
+                 <textarea class="description-project" type="text" placeholder="Пара слов о Вашем проекте"></textarea>
+               </div>
+               <div class="button">
+                 <button class="add-button">Добавить</button>
+               </div>
+        </form>
+          </div>
+      </div>
+       
+
+      
+    </div>
     <script src="bower/jquery/jquery.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/mymodule.js"></script>
  </body>
 </html>

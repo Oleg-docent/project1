@@ -95,7 +95,6 @@ display: inline-block;
 width: 47px;
 height: 47px;
 margin-right: -4px;
-margin-left: 10px;
 }
 
 .soc-link  {
@@ -389,6 +388,7 @@ input {
       border: 1px solid #48CBE8;
       border-radius: 5px;
       margin-bottom: 17px;
+      color: #48cbe8;
 }
       
 .email-right {
@@ -422,6 +422,7 @@ input {
    border: 1px solid #48CBE8;
    resize: none;
    padding-top: 5px;
+   color: #48cbe8;
 }
 
 .captcha-text {
@@ -501,20 +502,25 @@ input {
     height: 80px;
     margin-top: -80px;
     text-align: center;
-    font-size: 16px;
+    font-size: 13px;
     position: relative;
     background: #eff3f7;
     
 
 }
 
+.footer .container-footer {
+  margin: 0px auto;
+
+}
+
 .container-footer {
-  height: 78px;
   width: 960px;
 }
 
 .login {
   margin-top: -5px;
+
 }
 
 .login-left {
@@ -532,11 +538,6 @@ input {
   font-size: 16px;
   line-height: 2.2;
   color: #eff3f7;
-  margin-left: 535px;
-  margin-top: 20px;
-  margin-right: 0;
-
-
 }
 
 .login-link:hover {
@@ -544,8 +545,8 @@ input {
 }
 
 .footer-text {
-  position: absolute;
-  margin-left: 800px;
+  
+  margin-top: 25px;
 }
 
 .text-style {

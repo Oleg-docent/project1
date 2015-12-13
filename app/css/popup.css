@@ -1,0 +1,116 @@
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.popup {
+  left: 50%;
+  min-height: 530px;
+  position: absolute;
+  top: 315px;
+  width: 362px;
+  border-radius: 3.53px / 7.14px;
+  background: #EFF3F7 none repeat scroll 0% 0%;
+  box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
+  margin-left: -181px;
+}
+
+
+
+.popup-title {
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3.53px / 7.14px;
+  background: #48CBE8 none repeat scroll 0% 0%;
+  padding: 9px 11px 10px;
+
+
+}
+
+.close {
+    float: right;
+    margin: 3px 1px 0px 0px;
+    width: 25px;
+    height: 25px;
+}
+
+.add-project-title {
+  width: 249px;
+  color: #FFF;
+  font-family: "Fira Sans",sans-serif;
+  font-size: 25px;
+  margin-top:0;
+}
+
+.line {
+  height: 9px;
+  position: relative;
+  width: 362px;
+  background: #67DFFA none repeat scroll 0% 0%;
+  margin: -6px 0px 0px;
+}
+
+.popup-container {
+  margin: 10px auto;
+  width: 362px;
+}
+
+.name-project {
+  width: 322px;
+  float: left;
+  margin-left: 18px;
+}
+
+label {  
+   color: #959AA8;
+   font-size: 17px;
+   padding-bottom: 2px;
+
+   
+}
+
+input, textarea {
+  color: #48CBE8;
+  border: 1px solid #48CBE8;
+  border-radius: 5px;
+  margin: 6px auto 0px;
+  width: 100%;
+}
+
+input {
+  height: 40px;
+}
+
+.form-block {
+  width: 322px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 10px;
+
+}
+
+.description-project {
+  height: 120px;
+  resize: none;
+  color: #48CBE8;
+}
+
+.add-button {
+  height: 31px;
+  width: 140px;
+  border-radius: 4.71px;
+  background: #3BA8C0;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 30%;
+}
+
+.hide {
+  display: none;
+}
