@@ -14,6 +14,7 @@
   <meta name="keyword" content="">
   <meta name="author" content="">
   <link rel="stylesheet"  href="bower/normalize-css/normalize.css">
+  <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
   <link rel="stylesheet"  href="css/contact.css"> 
    <script src="js/html5shiv.js"></script>
   </head>
@@ -58,42 +59,43 @@
         </ul>
       </nav>
       <div class="contacts">
-        <div class="contacts-block">
-          <div class="contacts-title">
-            <p class="text-style">Контакты</p>
-          </div>
-        </div>
-        <div class="mail-block group">
-          <a href="mailto:dev_oleg@olegvoronko.ru" class="mail-text"><img class="mail" src="images/mail.png" alt="">
+        
+          <p class="contact text-style">Контакты</p>
+          
+      <ul class="contact-list">
+        <li class="contact e-mail">
+          <a href="mailto:dev_oleg@olegvoronko.ru" class="contact-link">
           dozent07@yandex.ru</a>
-        </div>
-        <div class="tel-block group">
-          <a href="tel:+79500232708"class="tel-text"><img class="tel" src="images/tel.png" alt="">
-          +79812342323</a>
-        </div>
-        <div class="skype-block group">
-          <a href="skype:oleg-dozent?call" class="skype-text"><img class="skype" src="images/skype.png" alt="">
+        </li>
+        <li class="contact tel-number">
+          <a href="tel:+79500232708">
+          +79500232708</a>
+        </li>
+        
+        <li class="contact skype">
+          <a href="skype:oleg-dozent?call">
           oleg-dozent
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
+     </div>
     </div>
     <div class="col-2">
      <section class="contact-me">
        <p class="contact-title">У вас есть интересный проект? Напишите мне</p>
        <div class="contact-container">
-         <form class="form-place" method="post" action="server">
+         <form class="form-place" method="post" >
            <div class="name-left">
              <label for="name">Имя</label>
-             <input class="form-name" type="text" placeholder="Как к вам обращаться">
+             <input class="form-name" type="text" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left">
            </div>
            <div class="email-right">
              <label for="e-mail">E-mail</label>
-             <input class="form-email" type="text" placeholder="Куда мне писать">
+             <input class="form-email" type="text" placeholder="Куда мне писать" qtip-content="Вы не ввели E-mail" qtip-position="right">
            </div>
            <div class="message-area">
              <label for="message">Сообщение</label>
-             <textarea class="message-text" placeholder="Кратко в чем суть" type="text"></textarea>
+             <textarea class="message-text" placeholder="Кратко в чем суть" type="text" qtip-content="Вы не описали суть" qtip-position="left"></textarea>
            </div>
            <p class="captcha-text">Введите код указанный на картинке</p>
            <div class="captcha-fields">
@@ -101,7 +103,7 @@
                <img class="c-image" src="images/captcha.png" alt="">
              </div>
              <div class="c-input">
-             <input class="captcha-input" type="text" placeholder="Введите код">
+             <input class="captcha-input" type="text" placeholder="Введите код" qtip-content="Вы не ввели код" qtip-position="right">
              </div>
            </div>
            <div class="buttons">
@@ -125,6 +127,9 @@
     </div>
    </footer>
    <script src="bower/jquery/jquery.js"></script>
+   <script src="bower/qtip2/jquery.qtip.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/validate.js"></script>
+   <script src="js/contact-form.js"></script>
  </body>
 </html>

@@ -65,6 +65,7 @@
   width: 322px;
   float: left;
   margin-left: 18px;
+  
 }
 
 label {  
@@ -113,4 +114,76 @@ input {
 
 .hide {
   display: none;
+}
+
+
+  .fileupload-label {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 43px;
+  right: 18px;
+  background: url('../images/cloud.png') no-repeat #48CBE8 50% 50%;
+  border-radius: 5px;
+  border-left: none;
+  margin-top: 5px;
+
+}
+
+
+#fileupload {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin-top: 20px;
+ 
+}
+
+
+.error-mes {
+  background-color: #fad2d1;
+  border-color: #f97e76;
+  color: #f97e76;
+}
+
+.success-mes {  
+  background-color: #b8e1ce;
+  border-color: #49bb7b;
+  color: #49bb7b; 
+}
+
+.has-error {
+  border: 1px solid #f97e76 !important;
+  background-color: rgba(249, 126, 118, 0.329) !important;
+}
+.qtip-mystyle {
+  background-color: #f97e76;
+  font-family: 'fira_sanslight';
+  color: #ffffff;
+  font-size: 13px;
+  min-width: 130px;
+  border-color: #f97e76;
+}
+.server-message {
+  display: none;
+  margin-left: 21px;
+  margin-bottom: 12px;
+  max-width: 311px;
+  border-radius: 4px;
+  min-height: 41px;
+  line-height: 2.5;
+  font-size: 15px;
+  font-family:"fira_sansbook";
+  padding-left: 10px;
+  border-radius: 2px; 
+}
+.error-message {
+  border: 1px solid #f97e76;  
+  background-color: #f2cccd;
+    color: rgb(249, 126, 118);
+}
+.success-message {
+  border: 1px solid #49bb7b;  
+  background-color: #b8e1ce;
+    color: rgb(73, 187, 123);   
 }
