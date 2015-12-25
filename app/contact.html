@@ -13,10 +13,19 @@
   <meta name="description" content="">
   <meta name="keyword" content="">
   <meta name="author" content="">
-  <link rel="stylesheet"  href="bower/normalize-css/normalize.css">
-  <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+  <!-- build:css css/vendor.min.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  
+  <!-- build:css css/main.min.css -->
   <link rel="stylesheet"  href="css/contact.css"> 
-   <script src="js/html5shiv.js"></script>
+  <!-- endbuild -->
+   <!--[if lt IE 9]>
+    <script src="bower/html5shiv/dist/html5shiv.js"></script>
+  <![endif]-->
   </head>
  <body>
   <div class="wrapper">
@@ -126,12 +135,21 @@
        <p class="footer-text">© 2015.Это мой сайт, пожалуйста не копируйте и не воруйте его</p>
     </div>
    </footer>
+   
+   <!-- build:js js/vendor.min.js -->
+   <!-- bower:js -->
    <script src="bower/jquery/jquery.js"></script>
-   <script src="bower/qtip2/jquery.qtip.js"></script>
    <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+   <script src="bower/bPopup/jquery.bpopup.js"></script>
+   <script src="bower/qtip2/jquery.qtip.js"></script>
+   <!-- endbower -->
+   <!-- endbuild -->
+
+   <!-- build:js js/main.min.js -->
    <script src="js/main.js"></script>
    <script src="js/validate.js"></script>
    <script src="js/contact-form.js"></script>
    <script src="js/placeholder.js"></script>
+   <!-- endbuild -->
  </body>
 </html>
