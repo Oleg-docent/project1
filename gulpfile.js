@@ -2,7 +2,6 @@
 
 var gulp = require("gulp"),
     wiredep = require('wiredep').stream,
-    connect = require('gulp-connect-php'),
     browserSync = require('browser-sync');
 
 // сборка html, css и javascript + удаление папки dist
@@ -17,31 +16,6 @@ var filter = require('gulp-filter'),
     imagemin = require('gulp-imagemin'),
     size = require('gulp-size'); 
 
-
-// перенос шрифтов
-gulp.task('fonts', function() {
-          gulp.src('app/fonts/**/*.*')
-            .pipe(filter(['*.eot','*.svg','*.ttf','*.woff','*.woff2']))
-            .pipe(gulp.dest('dist/fonts/'))
-        });
-
-// Картинки
- gulp.task('images', function () {
-          return gulp.src('app/images/*')
-            .pipe(imagemin({
-              progressive: true,
-              interlaced: true
-            }))
-            .pipe(gulp.dest('dist/images'));
-        });
-
-// Остальные файлы, такие как favicon.ico  и пр.
-gulp.task('extras', function () {
-          return gulp.src([
-            'app/*.*',
-            '!app/*.html'
-          ]).pipe(gulp.dest('dist'));
-        });
 
 // Загружаем сервер
 gulp.task('server', function () {  
@@ -67,10 +41,10 @@ gulp.task('server-dist', function () {
 gulp.task('watch', function () {
   gulp.watch([
     'app/*.html',
-    'app/css/*.css',
-    'app/js/*.js'
+    'app/css/**/*.css',
+    'app/js/**/*.js'
   ]).on('change', browserSync.reload);
-  gulp.watch('bower.json', ['wiredep']);
+  
 });
 
 gulp.task('default', ['server', 'watch']);
@@ -79,24 +53,64 @@ gulp.task('default', ['server', 'watch']);
 // Следим за bower
 gulp.task('wiredep', function () {
       gulp.src('app/*.html')
-        .pipe(wiredep())
+        .pipe(wiredep({
+          ignorePath: /^(\.\.\/)*\.\./
+        }))
         .pipe(gulp.dest('app/'))
     });
 
 // Переносим HTML, CSS, JS в папку dist 
 gulp.task('useref', function () {
-  return gulp.src('app/*.html')
-    .pipe(useref())
+   return gulp.src('app/*.html')
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
+    .pipe(useref())
     .pipe(gulp.dest('dist'));
 });
 
-// Очистка
-gulp.task('clean', function() {
-            return gulp.src('dist', { read: false }) 
-            .pipe(rimraf());
-        });
+// ====================================================
+// ====================================================
+// ================= Сборка DIST ======================
+
+// Очистка папки
+gulp.task('clean', function () {
+  return gulp.src('dist')
+    .pipe(rimraf());
+});
+
+// Переносим HTML, CSS, JS в папку dist 
+gulp.task('useref', function () {
+  return gulp.src('app/*.html')
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+});
+
+// Перенос шрифтов
+gulp.task('fonts', function() {
+  gulp.src('app/fonts/*')
+    .pipe(filter(['*.eot','*.svg','*.ttf','*.woff','*.woff2']))
+    .pipe(gulp.dest('dist/fonts/'))
+});
+
+// Картинки
+gulp.task('images', function () {
+  return gulp.src('app/images/**/*')
+    // .pipe(imagemin({
+    //     progressive: true
+     
+    // }))
+    .pipe(gulp.dest('dist/images'));
+});
+
+// Остальные файлы, такие как favicon.ico и пр.
+gulp.task('extras', function () {
+  return gulp.src([
+    'app/*.*',
+    '!app/*.html'
+  ]).pipe(gulp.dest('dist'));
+});
 
 // Сборка и вывод размера содержимого папки dist
 gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
@@ -107,7 +121,17 @@ gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
 gulp.task('build', ['clean'], function () {
   gulp.start('dist');
 });
-    
+
+// Проверка сборки 
+gulp.task('server-dist', function () {  
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: 'dist'
+    }
+  });
+});
 
 // ====================================================
 // ====================================================

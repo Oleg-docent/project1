@@ -10,7 +10,7 @@
 
 .popup {
   left: 50%;
-  min-height: 530px;
+  min-height: 590px;
   position: absolute;
   top: 315px;
   width: 362px;
@@ -86,6 +86,8 @@ input, textarea {
 
 input {
   height: 40px;
+  min-width: 315px
+
 }
 
 .form-block {
@@ -108,8 +110,8 @@ input {
   border-radius: 4.71px;
   background: #3BA8C0;
   color: #fff;
-  margin-top: 10px;
-  margin-left: 30%;
+  margin-top: 20px;
+  margin-left: 75%;
 }
 
 .hide {
@@ -136,10 +138,11 @@ input {
   height: 1px;
   overflow: hidden;
   margin-top: 20px;
+  display: none;
  
 }
 
-
+/*
 .error-mes {
   background-color: #fad2d1;
   border-color: #f97e76;
@@ -151,7 +154,7 @@ input {
   border-color: #49bb7b;
   color: #49bb7b; 
 }
-
+*/
 .has-error {
   border: 1px solid #f97e76 !important;
   background-color: rgba(249, 126, 118, 0.329) !important;
@@ -164,6 +167,7 @@ input {
   min-width: 130px;
   border-color: #f97e76;
 }
+/*
 .server-message {
   display: none;
   margin-left: 21px;
@@ -187,3 +191,8 @@ input {
   background-color: #b8e1ce;
     color: rgb(73, 187, 123);   
 }
+ */
+
+
+
+
