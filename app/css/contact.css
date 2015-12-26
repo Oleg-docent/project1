@@ -364,7 +364,7 @@ overflow: hidden;
   width: 190px;
 }
 
-label {
+.contact-label {
     font-family: fira_sanslight;
     font-size: 19px;
     color: #4A545D;
@@ -372,7 +372,7 @@ label {
 
 }
 
-input {
+.input-contact {
       max-width: 190px;
       height: 40px;
       margin-right: 10px;
