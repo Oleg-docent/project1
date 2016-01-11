@@ -81,8 +81,8 @@ body {
   float: right;
   position: relative;
   width: 260px;
-  
-  
+  margin: 0px;
+  padding: 0px;
 }
 
 .social-icon:first-child {
