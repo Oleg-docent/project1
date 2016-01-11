@@ -93,7 +93,12 @@ display: inline-block;
 width: 47px;
 height: 47px;
 margin-right: -4px;
+margin-left: 24px;
 
+}
+
+.soc-link:first-child {
+  margin-left: 0px;
 }
 
 .soc-link  {
@@ -102,6 +107,8 @@ display: block;
 text-indent: -9999px;
 width: 100%;
 height: 100%;
+margin-left: 24px;
+
 
 }
   
@@ -112,34 +119,34 @@ height: 100%;
 
 
 .soc-tw {
-  background-position: -121px -1px ;
+  background-position: -121px -1px;
   margin-left: 20px;
 }
 
 .soc-fb {
-  background-position: -193px -1px ;
+  background-position: -193px -1px;
   margin-left: 38px;
 }
 
 .soc-gh {
-  background-position: -264px -1px ;
+  background-position: -264px -1px;
   margin-left: 55px;
 }
 
 .soc-vk:hover{
-  background-position: -50px -52px ;
+  background-position: -50px -52px;
 }
 
 .soc-tw:hover{
-  background-position: -122px -52px ;
+  background-position: -122px -52px;
 }
 
 .soc-fb:hover{
-  background-position: -194px -53px ;
+  background-position: -194px -53px;
 }
 
 .soc-gh:hover {
-  background-position: -263px -53px ;
+  background-position: -263px -53px;
 }
 
 
